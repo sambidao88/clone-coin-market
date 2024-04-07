@@ -13,10 +13,10 @@ export default function LoginPage({ onCancel }) {
         <button>x</button>
       </div>
       <div className="topLoginPage text-2xl text-gray-500 font-semibold text-center space-x-12 p-4">
-        <button onClick={() => setActiveLogin(true)} className="">
+        <button onClick={() => setActiveLogin(true)} className="focus:text-blue-500">
           Login
         </button>
-        <button onClick={() => setActiveLogin(false)}>Sign Up</button>
+        <button onClick={() => setActiveLogin(false)} className="focus:text-blue-500">Sign Up</button>
       </div>
       <div className="midLoginPage pt-4 px-6">
         <form>
@@ -33,12 +33,14 @@ export default function LoginPage({ onCancel }) {
             placeholder="Enter your password..."
           />
           {activeLogin && (
+            <>
             <button
-              className="bg-blue-600 w-full text-lg text-white py-3 rounded-lg mt-4"
+              className="bg-blue-600 w-full text-lg text-white py-3 rounded-lg my-2"
               type="submit">
               Login
             </button>
-          )}
+            <button className="w-full text-center font-semib">Forgot password?</button>
+          </>)}
           {!activeLogin && (
             <div className="flex items-baseline space-x-2">
               <input type="checkbox" />

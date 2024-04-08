@@ -14,17 +14,12 @@ export async function fetchCoinMarketData() {
       }
     );
 
-    const trendingCrypto = response.data.map((coin) => ({
-      id: coin.id,
-      name: coin.name,
-      symbol: coin.symbol,
-      currentPrice: coin.current_price,
-      image: coin.image,
-    }));
+    // Correction: Use response.data instead of response.JSON()
+    const cryptoListData = response.data;
 
-    return { trendingCrypto };
+    return cryptoListData;
   } catch (error) {
     console.error("Error fetching data:", error);
-    throw error;
+    throw error; // Re-throw the error for proper handling
   }
 }

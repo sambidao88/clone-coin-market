@@ -43,7 +43,7 @@ export default function CryptoList() {
                 </span>
                 <div className="flex flex-col justify-center">
                   <div>{coin.name}</div>
-                  <div className="text-grap-400 uppercase">{coin.symbol}</div>
+                  <div className="text-gray-400 uppercase">{coin.symbol}</div>
                 </div>
               </div>
               <div>{coin.current_price}</div>

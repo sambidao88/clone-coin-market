@@ -34,7 +34,7 @@ export default function CryptoList() {
           {coinData.map((coin) => (
             <li
               key={coin.id}
-              className="list_header font-semibold flex w-full justify-between items-center py-2 px-5 border-[1px] border-gray-100"
+              className="list_header font-semibold flex w-full justify-between items-center py-4 px-6 border-[1px] border-gray-100"
             >
               <div>{coin.market_cap_rank}</div>
               <div className="w-40 flex items-center space-x-2">

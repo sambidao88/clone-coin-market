@@ -22,6 +22,14 @@ export default function CryptoList() {
     <div>
       {coinData.length > 0 ? (
         <ul>
+            <li className="list_header font-semibold flex w-full justify-between py-2 px-5 border-[1px] border-gray-100">
+                <div>#</div>
+                <div className="w-40">Name</div>
+                <div>Price</div>
+                <div>1h %</div>
+                <div>24h %</div>
+                <div>7d %</div>
+            </li>
           {coinData.map((coin) => (
             <li key={coin.id}>
               {/* Display coin data here (e.g., name, symbol, price) */}
